@@ -10,6 +10,9 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-inter)"]
+      },
+      screens: {
+        "3xl": "2000px"
       }
     }
   },

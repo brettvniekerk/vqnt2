@@ -4,8 +4,13 @@ import "./globals.css";
 import classNames from "classnames";
 import fonts from "@/constants/fonts";
 
+const TITLE = "VQNT2";
+
 export const metadata: Metadata = {
-  title: "VQNT2",
+  title: {
+    default: TITLE,
+    template: `%s | ${TITLE}`
+  },
   description: "A Very Quick NextJS Template",
   appleWebApp: {
     capable: true

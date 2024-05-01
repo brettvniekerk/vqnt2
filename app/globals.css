@@ -19,8 +19,8 @@ html,
 body {
   height: 100%;
   overflow-x: hidden;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 html {

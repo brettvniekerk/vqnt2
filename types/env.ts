@@ -1,1 +1,1 @@
-export type EnvVariable = "";
+export type EnvVariable = "APP_URL";
