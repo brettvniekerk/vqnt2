@@ -32,9 +32,16 @@ html {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  /* Blur that works on Safari */
+  .background-blur {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
   }
 }

@@ -1,7 +1,7 @@
-// import something from "./something.ts";
+import * as string from "./string";
 
-// const utils = {
-//   something
-// };
+const utils = {
+  string
+};
 
-// export default utils;
+export default utils;
