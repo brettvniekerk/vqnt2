@@ -13,6 +13,10 @@ const config = {
       },
       screens: {
         "3xl": "2000px"
+      },
+      colors: {
+        "vqnt2-black": "#000000",
+        "vqnt2-white": "#ffffff"
       }
     }
   },

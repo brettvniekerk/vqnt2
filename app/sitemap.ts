@@ -1,4 +1,3 @@
-import { APP_URL } from "@/constants/env";
 import { lstatSync, readdirSync } from "fs";
 import { MetadataRoute } from "next";
 
@@ -12,14 +11,14 @@ export default function (): MetadataRoute.Sitemap {
       return lstatSync(path).isDirectory();
     })
     .map(uri => ({
-      url: `${APP_URL}/${uri}`,
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/${uri}`,
       lastModified,
       priority: 0.5
     }));
 
   return [
     {
-      url: `${APP_URL}/`,
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/`,
       lastModified,
       priority: 1
     },

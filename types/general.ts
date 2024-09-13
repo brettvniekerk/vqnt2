@@ -2,6 +2,6 @@ import { ReactNode } from "react";
 
 export type Href = `/${string}`;
 
-export type ChildProp = {
+export type ChildrenProp = {
   children: ReactNode;
 };

@@ -1,1 +1,1 @@
-export type EnvVariable = "APP_URL";
+export type EnvVariable = "NEXT_PUBLIC_APP_URL" | "NEXT_PUBLIC_API_URL";

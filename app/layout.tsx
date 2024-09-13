@@ -1,10 +1,11 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import classNames from "classnames";
 import fonts from "@/constants/fonts";
 import { SITE_TITLE, SITE_TITLE_LONG } from "@/constants/general";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { ChildrenProp } from "@/types/general";
+// import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: {
@@ -24,11 +25,14 @@ export const viewport: Viewport = {
   userScalable: false
 };
 
-const RootLayout: FC<{
-  children: ReactNode;
-}> = ({ children }) => (
+const RootLayout: FC<ChildrenProp> = ({ children }) => (
   <html lang="en">
-    <body className={classNames(fonts, "font-sans text-sm")}>
+    <body
+      className={classNames(
+        fonts,
+        "font-sans text-sm bg-vqnt2-black text-vqnt2-white"
+      )}
+    >
       <main>{children}</main>
     </body>
     {/* <GoogleAnalytics /> */}

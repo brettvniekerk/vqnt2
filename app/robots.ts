@@ -1,4 +1,3 @@
-import { APP_URL } from "@/constants/env";
 import { MetadataRoute } from "next";
 
 export default (): MetadataRoute.Robots => ({
@@ -6,5 +5,5 @@ export default (): MetadataRoute.Robots => ({
     userAgent: "*",
     allow: "/"
   },
-  sitemap: `${APP_URL}/sitemap.xml`
+  sitemap: `${process.env.NEXT_PUBLIC_APP_URL}/sitemap.xml`
 });

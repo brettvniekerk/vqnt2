@@ -17,8 +17,6 @@
 
 body {
   overflow-x: hidden;
-  background-color: black;
-  color: white;
 }
 
 @layer utilities {
