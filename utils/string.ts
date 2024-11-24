@@ -11,3 +11,7 @@ export const formatRoute = (route: Href) => {
     })
     .join(" ");
 };
+
+export const replaceWhitespace = (str: string) => str.replaceAll(" ", "-");
+
+export const unreplaceWhitespace = (str: string) => str.replaceAll("-", " ");

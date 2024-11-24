@@ -1,1 +1,11 @@
-export type EnvVariable = "NEXT_PUBLIC_APP_URL" | "NEXT_PUBLIC_API_URL";
+export type EnvVariable = "APP_URL" | "API_URL" | "BCRYPT_SALT_ROUNDS";
+
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      APP_URL: string;
+      API_URL: string;
+      BCRYPT_SALT_ROUNDS: string;
+    }
+  }
+}

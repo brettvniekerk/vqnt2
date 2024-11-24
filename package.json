@@ -1,17 +1,19 @@
 {
   "name": "vqnt2",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3001",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port 3001",
     "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.19",
     "@next/third-parties": "^14.2.3",
+    "bcrypt": "^5.1.1",
     "classnames": "^2.5.1",
+    "dayjs": "^1.11.13",
     "mobile-detect": "^1.4.5",
     "next": "^15.0.0-rc.0",
     "react": "^19.0.0-rc-94e652d5-20240912",
@@ -19,6 +21,7 @@
     "react-icons": "^5.1.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

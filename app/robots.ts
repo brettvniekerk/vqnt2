@@ -1,9 +1,13 @@
 import { MetadataRoute } from "next";
 
-export default (): MetadataRoute.Robots => ({
-  rules: {
-    userAgent: "*",
-    allow: "/"
-  },
-  sitemap: `${process.env.NEXT_PUBLIC_APP_URL}/sitemap.xml`
-});
+function createRobots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/"
+    },
+    sitemap: `${process.env.APP_URL}/sitemap.xml`
+  };
+}
+
+export default createRobots;
