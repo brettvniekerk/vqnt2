@@ -1,0 +1,28 @@
+{
+    "New Page": {
+        "prefix": "newpage",
+        "body": [
+            "import React, { FC, Fragment } from \"react\";",
+            "import { Metadata } from \"next\";",
+            "import AppSection from \"@/components/containers/AppSection\";",
+            "import PageTitle from \"@/components/text/PageTitle\";",
+            "",
+            "export const metadata: Metadata = {",
+            "  title: \"${1:PageName}\"",
+            "};",
+            "",
+            "const ${1:PageName}: FC = () => {",
+            "  return (",
+            "    <Fragment>",
+            "      <AppSection>",
+            "        <PageTitle>${1:PageName}</PageTitle>",
+            "      </AppSection>",
+            "    </Fragment>",
+            "  );",
+            "};",
+            "",
+            "export default ${1:PageName}",
+            ""
+        ]
+    }
+}

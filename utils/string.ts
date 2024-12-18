@@ -15,3 +15,6 @@ export const formatRoute = (route: Href) => {
 export const replaceWhitespace = (str: string) => str.replaceAll(" ", "-");
 
 export const unreplaceWhitespace = (str: string) => str.replaceAll("-", " ");
+
+export const removeProtocol = (href: Href): string =>
+  href.slice(href.indexOf("/") + 2);

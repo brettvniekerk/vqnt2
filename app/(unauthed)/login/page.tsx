@@ -1,6 +1,6 @@
 import LoginForm from "@/components/form/auth/LoginForm";
+import AppLink from "@/components/nav/AppLink";
 import { Metadata } from "next";
-import Link from "next/link";
 import React, { FC } from "react";
 
 export const metadata: Metadata = {
@@ -12,9 +12,9 @@ const Login: FC = () => {
     <div className="w-full">
       <LoginForm />
 
-      <div className="mt-8">
-        Not a member? <Link href="/signup">Sign Up</Link>
-      </div>
+      <p className="text-center lg:text-base">
+        Not a member? <AppLink href="/signup">Sign Up Now</AppLink>
+      </p>
     </div>
   );
 };

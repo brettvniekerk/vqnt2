@@ -1,6 +1,6 @@
 {
   "name": "vqnt2",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --port 3001",
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.19",
+    "@headlessui/react": "^2.2.0",
     "@next/third-parties": "^14.2.3",
     "bcrypt": "^5.1.1",
     "classnames": "^2.5.1",
@@ -28,6 +28,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
+    "tailwind-heropatterns": "^0.0.8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/interactable/Button";
-import { FC, useCallback, useEffect } from "react";
+import React, { FC, useCallback, useEffect } from "react";
 
 type Props = {
   error: Error & { digest?: string };

@@ -3,7 +3,7 @@
 import { COOKIE_JWT, COOKIE_OPTIONS } from "@/constants/cookies";
 import { ONE_DAY_S } from "@/constants/time";
 import { ServerActionError } from "@/types/general";
-import { UpdatedUser, User } from "@/types/vqnt2";
+import { UpdatedUser, User } from "@/types/app";
 import utils from "@/utils";
 import { revalidateTag } from "next/cache";
 import { cookies } from "next/headers";

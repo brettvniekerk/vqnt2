@@ -1,9 +1,9 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import classNames from "classnames";
 import fonts from "@/constants/fonts";
-import { SITE_TITLE, SITE_TITLE_LONG } from "@/constants/general";
+import { COLORS, SITE_TITLE, SITE_TITLE_LONG } from "@/constants/general";
 import { ChildrenProp } from "@/types/general";
 // import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -22,7 +22,8 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  userScalable: false
+  userScalable: false,
+  themeColor: COLORS["app-black"]
 };
 
 const RootLayout: FC<ChildrenProp> = ({ children }) => (
@@ -30,10 +31,10 @@ const RootLayout: FC<ChildrenProp> = ({ children }) => (
     <body
       className={classNames(
         fonts,
-        "font-sans text-sm bg-vqnt2-black text-vqnt2-white"
+        "font-sans text-sm bg-app-black text-app-white selection:bg-app-white selection:text-app-black"
       )}
     >
-      <main>{children}</main>
+      {children}
     </body>
     {/* <GoogleAnalytics /> */}
   </html>

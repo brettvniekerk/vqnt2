@@ -21,7 +21,7 @@ const _TextAreaInput = (
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className="border border-oldschool-black px-1 block rounded-[2px]"
+      className="border-b border-app-white placeholder-shown:border-app-white/10 bg-app-black text-app-white placeholder:text-app-white/50 py-2 w-full"
     />
   );
 };

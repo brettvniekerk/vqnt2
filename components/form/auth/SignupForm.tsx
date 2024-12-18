@@ -5,7 +5,7 @@ import { signup } from "@/actions/auth";
 
 const SignupForm: FC = () => {
   return (
-    <BaseForm action={signup} name="Signup">
+    <BaseForm action={signup} name="Sign Up">
       <TextInput
         name="email"
         type="email"

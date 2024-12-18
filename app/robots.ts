@@ -6,7 +6,7 @@ function createRobots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: `${process.env.APP_URL}/sitemap.xml`
+    sitemap: `${process.env.APP_URL}/sitemap`
   };
 }
 

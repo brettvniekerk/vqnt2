@@ -3,6 +3,7 @@
 import { ChildrenProp } from "@/types/general";
 import React, { FC, ButtonHTMLAttributes } from "react";
 import { useFormStatus } from "react-dom";
+import { FaChevronRight } from "react-icons/fa";
 
 type Props = Pick<
   ButtonHTMLAttributes<HTMLButtonElement>,
@@ -23,9 +24,11 @@ const Button: FC<Props> = ({
       type={type}
       disabled={status.pending || disabled}
       onClick={onClick}
-      className="border border-oldschool-black rounded-[4px] bg-oldschool-gray hover:bg-oldschool-dark-gray px-3 pt-[2px] pb-[1px] block w-fit"
+      className="px-4 py-2 rounded-md bg-app-white text-app-black font-bold transition-colors duration-100 hover:bg-app-white/90 flex items-center w-fit whitespace-nowrap"
     >
       {children}
+
+      <FaChevronRight className="inline-block ml-2" />
     </button>
   );
 };

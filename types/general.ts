@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 
-export type Href = `/${string}`;
+export type Protocol = "http" | "https";
+
+export type Href = `/${string}` | `${Protocol}://${string}`;
 
 export type ChildrenProp = {
   children: ReactNode | Array<ReactNode>;

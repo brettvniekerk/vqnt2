@@ -9,18 +9,29 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)"]
+        sans: ["var(--font-inter)"],
+        lato: ["var(--font-lato)"]
       },
       screens: {
         "3xl": "2000px"
       },
       colors: {
-        "vqnt2-black": "#000000",
-        "vqnt2-white": "#ffffff"
+        "app-black": "#000000",
+        "app-white": "#ffffff"
       }
     }
   },
-  plugins: []
+  plugins: [
+    require("tailwind-heropatterns")({
+      patterns: ["graph-paper"],
+      colors: {
+        default: "#ffffff"
+      },
+      opacity: {
+        default: "0.1"
+      }
+    })
+  ]
 } satisfies Config;
 
 export default config;

@@ -8,6 +8,8 @@ import React, {
   useEffect
 } from "react";
 import Button from "../interactable/Button";
+import AppSection from "../containers/AppSection";
+import PageTitle from "../text/PageTitle";
 
 const BASE_ERROR_STATE: ServerActionError = {
   error: undefined
@@ -38,18 +40,18 @@ const BaseForm: FC<Props> = ({
   }, [state]);
 
   return (
-    <form
-      action={dispatch}
-      onSubmit={dispatch}
-      className="flex gap-y-4 flex-col w-full"
-    >
-      {!!name && <p className="font-bold text-xl">{name}</p>}
+    <form action={dispatch} onSubmit={dispatch}>
+      {!!name && (
+        <AppSection className="text-center">
+          <PageTitle>{name}</PageTitle>
+        </AppSection>
+      )}
 
-      {children}
+      <AppSection className="flex flex-col items-center lg:items-start gap-y-4">
+        {children}
 
-      <div className="mt-4">
         <Button type="submit">Submit</Button>
-      </div>
+      </AppSection>
     </form>
   );
 };
