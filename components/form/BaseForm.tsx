@@ -19,6 +19,7 @@ type PickedFormProps = Pick<FormHTMLAttributes<HTMLFormElement>, "onSubmit">;
 
 type Props = {
   name?: string;
+  disabled?: boolean;
   action?: (_: any, formdata: FormData) => Promise<any>;
 } & PickedFormProps &
   ChildrenProp;
@@ -26,6 +27,7 @@ type Props = {
 const BaseForm: FC<Props> = ({
   children,
   name = undefined,
+  disabled = false,
   action = undefined,
   onSubmit = undefined
 }) => {
@@ -50,7 +52,9 @@ const BaseForm: FC<Props> = ({
       <AppSection className="flex flex-col items-center lg:items-start gap-y-4">
         {children}
 
-        <Button type="submit">Submit</Button>
+        <Button type="submit" disabled={disabled}>
+          Submit
+        </Button>
       </AppSection>
     </form>
   );

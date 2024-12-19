@@ -5,7 +5,9 @@ import React, { FC } from "react";
 const LogoutForm: FC = () => {
   return (
     <form action={logout}>
-      <Button type="submit">Logout</Button>
+      <Button type="submit" disabled>
+        Logout
+      </Button>
     </form>
   );
 };

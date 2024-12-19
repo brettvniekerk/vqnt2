@@ -24,7 +24,7 @@ const Button: FC<Props> = ({
       type={type}
       disabled={status.pending || disabled}
       onClick={onClick}
-      className="px-4 py-2 rounded-md bg-app-white text-app-black font-bold transition-colors duration-100 hover:bg-app-white/90 flex items-center w-fit whitespace-nowrap"
+      className="px-4 py-2 rounded-md bg-app-white/50 enabled:bg-app-white text-app-black font-bold transition-colors duration-100 enabled:hover:bg-app-white/90 flex items-center w-fit whitespace-nowrap"
     >
       {children}
 

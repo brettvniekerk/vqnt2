@@ -5,13 +5,14 @@ import { signup } from "@/actions/auth";
 
 const SignupForm: FC = () => {
   return (
-    <BaseForm action={signup} name="Sign Up">
+    <BaseForm action={signup} name="Sign Up" disabled>
       <TextInput
         name="email"
         type="email"
         placeholder="Email *"
         autoComplete="email"
         required
+        disabled
       />
       <TextInput
         name="password"
@@ -19,6 +20,7 @@ const SignupForm: FC = () => {
         placeholder="Password *"
         autoComplete="new-password"
         required
+        disabled
       />
     </BaseForm>
   );

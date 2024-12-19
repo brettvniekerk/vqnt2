@@ -2,7 +2,7 @@ import React, { forwardRef, LegacyRef, TextareaHTMLAttributes } from "react";
 
 type PickedInputProps = Pick<
   TextareaHTMLAttributes<HTMLTextAreaElement>,
-  "name" | "required" | "placeholder" | "value" | "onChange"
+  "name" | "required" | "placeholder" | "value" | "onChange" | "disabled"
 >;
 
 type RequiredProps = Required<Pick<PickedInputProps, "name">>;
@@ -10,7 +10,7 @@ type RequiredProps = Required<Pick<PickedInputProps, "name">>;
 type Props = PickedInputProps & RequiredProps;
 
 const _TextAreaInput = (
-  { name, required, placeholder, value, onChange }: Props,
+  { name, required, placeholder, value, disabled, onChange }: Props,
   ref: LegacyRef<HTMLTextAreaElement>
 ) => {
   return (
@@ -20,6 +20,7 @@ const _TextAreaInput = (
       required={required}
       placeholder={placeholder}
       value={value}
+      disabled={disabled}
       onChange={onChange}
       className="border-b border-app-white placeholder-shown:border-app-white/10 bg-app-black text-app-white placeholder:text-app-white/50 py-2 w-full"
     />

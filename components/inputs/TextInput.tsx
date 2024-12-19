@@ -16,6 +16,7 @@ type PickedInputProps = Pick<
   | "hidden"
   | "readOnly"
   | "autoComplete"
+  | "disabled"
 >;
 
 type RequiredProps = Required<Pick<PickedInputProps, "name">>;
@@ -33,7 +34,8 @@ const _TextInput = (
     onChange = undefined,
     hidden = false,
     readOnly = false,
-    autoComplete = undefined
+    autoComplete = undefined,
+    disabled = false
   }: Props,
   ref: LegacyRef<HTMLInputElement>
 ) => {
@@ -50,6 +52,7 @@ const _TextInput = (
       hidden={hidden}
       readOnly={readOnly}
       autoComplete={autoComplete}
+      disabled={disabled}
       className={classNames(
         "border-b border-app-white placeholder-shown:border-app-white/10 bg-app-black text-app-white placeholder:text-app-white/50 py-2 w-full",
         {
